@@ -1,12 +1,93 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>松鼠计算器 - 专为日常和购物而设计</title>
+    <style>
+        .header {
+            margin-bottom: 2rem;
+            padding: 1rem;
+        }
+
+        .feature-image {
+            width: 450px;  /* 设置固定宽度为450px */
+            height: auto;  /* 高度自动，保持图片比例 */
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            display: block;  /* 让图片左对齐显示 */
+            margin-left: 0;  /* 移除左边距 */
+            margin-right: auto;
+        }
+
+        .feature {
+            margin-bottom: 2rem;
+            padding: 1rem;
+        }
+
+        /* 确保在小屏幕上图片不会溢出 */
+        @media screen and (max-width: 480px) {
+            .feature-image {
+                width: 100%;  /* 在小屏幕上自适应宽度 */
+            }
+        }
+    </style>
+</head>
 <body>
-<h1>松鼠计算器</h1>
-<p>无广告、无订阅，启动迅速，操作简单。只要用上它，从此告别购物时的烦琐计算！</p>
-<h2>【主要功能】</h2>
-<p>1. 显示计算历史：查阅、比价、复用和删除都很方便</p>
-<p>2. 比价模式：当计算都是除法时，不同颜色标记结果，让性价比一目了然</p>
-<p>3. 清新的界面：打破传统深色计算器风格，界面明亮清新</p>
-<p>4. 人性化操作：适合单手操作，支持逐字删除、长按AC清空记录、轻点复制计算结果，双击全屏显示结果</p>
+    <!-- 主标题区域 -->
+    <header class="header">
+        <h1>松鼠计算器</h1>
+        <p class="subtitle">无广告、无订阅，启动迅速，操作简单。只要用上它，从此告别购物时的烦琐计算！</p>
+    </header>
+
+    <!-- 主要功能介绍 -->
+    <main>
+        <section class="feature">
+            <h2>显示计算历史</h2>
+            <p>方便多次计算结果对比和复用，让您在购物比价时更加得心应手。支持查看历史记录、一键复用数据，让计算更加高效。</p>
+            <img src="images/screenshot1.png" alt="计算历史功能展示" class="feature-image">
+        </section>
+
+        <section class="feature">
+            <h2>比价模式</h2>
+            <p>独特的比价功能，使用不同颜色标记计算结果，让性价比一目了然。在购物时快速找出最优选择，轻松做出明智决定。</p>
+            <img src="images/screenshot2.png" alt="比价模式功能展示" class="feature-image">
+        </section>
+
+        <section class="feature">
+            <h2>清新界面</h2>
+            <p>打破传统深色计算器的沉闷风格，采用明亮清新的设计语言。精心调配的色彩和布局，让使用体验更加愉悦。</p>
+            <img src="images/screenshot3.png" alt="清新界面展示" class="feature-image">
+        </section>
+
+        <section class="feature">
+            <h2>人性化操作</h2>
+            <ul>
+                <li>单手操作：精心设计的按键布局，完美适配单手使用场景</li>
+                <li>智能删除：支持逐字删除，避免输错需要重新开始</li>
+                <li>快捷清空：长按AC键即可一键清空所有记录</li>
+                <li>便捷复制：轻点即可复制计算结果到剪贴板</li>
+                <li>全屏显示：双击可切换全屏模式，查看更多细节</li>
+            </ul>
+            <img src="images/screenshot4.png" alt="人性化操作展示" class="feature-image">
+        </section>
+
+        <!-- FAQ部分 -->
+        <section class="faq">
+            <h2>常见问题</h2>
+            <div class="faq-item">
+                <h3>计算器是否收费？</h3>
+                <p>无广告，无订阅</p>
+            </div>
+            <div class="faq-item">
+                <h3>支持哪些设备？</h3>
+                <p>目前支持iOS设备，包括iPhone和iPad。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright © 2024 松鼠计算器 - 保留所有权利</p>
+    </footer>
 </body>
 </html>
