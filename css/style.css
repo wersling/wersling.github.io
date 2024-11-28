@@ -1,10 +1,8 @@
 :root {
-    --primary-color: #FF8FB1;
-    --secondary-color: #B1B2FF;
-    --background-color: #FFF5F7;
-    --text-color: #4A4A4A;
-    --accent-color: #FFD1DA;
-    --shadow-color: rgba(255, 143, 177, 0.1);
+    --primary-color: #333333;
+    --secondary-color: #333333;
+    --text-color: #333333;
+    --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -17,7 +15,7 @@ body {
     font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     line-height: 1.8;
     color: var(--text-color);
-    background-color: var(--background-color);
+    background: linear-gradient(135deg, #F8F0FF 0%, #FFF0F5 100%);
     letter-spacing: 0.3px;
 }
 
@@ -29,7 +27,7 @@ body {
 
 /* 导航栏样式 */
 .navbar {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 20px var(--shadow-color);
     position: fixed;
@@ -40,9 +38,9 @@ body {
 
 .navbar .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    height: 70px;
+    padding: 1rem 0px;
 }
 
 .nav-brand {
@@ -64,13 +62,21 @@ body {
     color: var(--primary-color);
 }
 
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-right: 12px;
+}
+
 .nav-links a {
-    color: var(--text-color);
+    color: #333333;
     text-decoration: none;
-    margin-left: 20px;
-    font-weight: 500;
-    transition: color 0.3s ease;
-    position: relative;
+    font-size: 0.9rem;
+}
+
+.nav-links a:hover {
+    color: #666666;
 }
 
 .nav-links a:after {
@@ -88,55 +94,61 @@ body {
     width: 100%;
 }
 
-/* Hero区域样式 */
+/* Hero区域样式调整 */
 .hero {
     padding: 140px 0 80px;
-    background: linear-gradient(135deg, #FFF 0%, var(--background-color) 100%);
+    background: transparent;
+    text-align: center;
 }
 
 .hero-content {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 60px;
+    justify-content: center;
+    gap: 30px;
     margin-bottom: 60px;
 }
 
 .hero-text {
-    flex: 1;
-    text-align: left;
+    flex: none; /* 移除 flex: 1 */
+    text-align: center;
     max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hero-text h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: var(--secondary-color);
-    font-weight: 700;
-    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 25px;
+    font-size: 2.4rem;
+    margin-bottom: 5px;
+    color: #333333;
+    font-weight: 600;
+    background: none;
+    -webkit-text-fill-color: initial;
 }
 
 .subtitle {
     font-size: 1.5rem;
-    color: var(--secondary-color);
+    color: #333333;
     margin-bottom: 20px;
     font-weight: 500;
     letter-spacing: 0.5px;
+    margin-top: 0;
 }
 
 .description {
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-    color: #666;
-    line-height: 1.8;
-    font-size: 1.15rem;
+    text-align: center;
+    max-width: 500px; /* 控制文字宽度 */
+    margin: 0 auto 30px;
 }
 
 .download-buttons {
     display: flex;
-    gap: 20px;
+    gap: 25px;
+    margin-top: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .download-buttons img {
@@ -325,7 +337,7 @@ body {
 /* 联系我们样式 */
 .contact {
     padding: 100px 0;
-    background-color: white;
+    background-color: #FFFFFF;
 }
 
 .contact h2 {
@@ -399,7 +411,7 @@ body {
     color: var(--primary-color);
 }
 
-/* 响应式设计 */
+/* 应式设计 */
 @media (max-width: 768px) {
     .hero-content {
         flex-direction: column;
@@ -471,7 +483,7 @@ body {
 /* 添加语言选择器样式 */
 .language-selector {
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 0;
     position: relative;
 }
 
@@ -707,8 +719,11 @@ body {
 
 .hero-text {
     flex: 1;
-    text-align: left;
+    text-align: center;
     max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hero-image {
@@ -752,7 +767,8 @@ body {
 
 /* 修改页脚样式 */
 footer {
-    background-color: var(--secondary-color);
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
     color: white;
     padding: 40px 0;
 }
@@ -767,6 +783,7 @@ footer {
 .footer-content p {
     margin: 0;
     text-align: center;
+    color: #333333;
 }
 
 /* 修改 feature-icon 样式 */
@@ -778,5 +795,126 @@ footer {
 /* 修改 contact-icon 样式 */
 .contact-icon i {
     font-style: normal; /* 移除斜体 */
-    font-family: system-ui; /* 使用系统字体��确保图标正常显示 */
+    font-family: system-ui; /* 使用系统字体确保图标正常显示 */
+}
+
+/* 调整 Hero 区域 app 图标样式 */
+.hero-app-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px var(--shadow-color);
+}
+
+/* 下载按钮区域样式 */
+.download-buttons {
+    display: flex;
+    gap: 25px;
+    margin-top: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.download-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 500;
+    background-color: #000000;
+    color: white;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+    min-width: 180px;
+    justify-content: center;
+    position: relative;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.button-icon {
+    font-size: 1rem;
+}
+
+/* 按钮发光边框效果 */
+.download-button::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 16px;
+    background: linear-gradient(45deg, #FF69B4, #9370DB);
+    z-index: -1;
+    transition: all 0.2s ease;
+    opacity: 0.7;
+}
+
+.download-button:hover {
+    transform: translateY(-2px);
+    background-color: #222222;
+}
+
+.download-button:hover::before {
+    opacity: 1;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+}
+
+/* 移除之前的颜色样式 */
+.download-button:nth-child(1),
+.download-button:nth-child(2),
+.download-button:nth-child(3) {
+    background-color: #000000;
+    box-shadow: none;
+}
+
+.download-button:nth-child(1):hover,
+.download-button:nth-child(2):hover,
+.download-button:nth-child(3):hover {
+    background-color: #222222;
+}
+
+/* 每个按钮不同的渐变边框颜色 */
+.download-button:nth-child(1)::before {
+    background: linear-gradient(45deg, #FF69B4, #9370DB);
+}
+
+.download-button:nth-child(2)::before {
+    background: linear-gradient(45deg, #9370DB, #87CEEB);
+}
+
+.download-button:nth-child(3)::before {
+    background: linear-gradient(45deg, #87CEEB, #FF69B4);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .download-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .download-button {
+        width: 100%;
+        max-width: 260px;
+    }
+}
+
+/* 移动端响应式调整 */
+@media (max-width: 768px) {
+    .hero-content {
+        gap: 20px;
+    }
+
+    .hero-text {
+        padding: 0 20px;
+    }
 }

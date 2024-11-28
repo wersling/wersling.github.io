@@ -10,10 +10,6 @@
     <!-- 导航栏 -->
     <nav class="navbar">
         <div class="container">
-            <div class="nav-brand">
-                <img src="images/app-icon.png" alt="比价计算器" class="app-icon">
-                <span class="app-name">比价计算器</span>
-            </div>
             <div class="nav-links">
                 <div class="language-selector">
                     <select id="languageSelect">
@@ -34,96 +30,23 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
+                    <img src="images/app-icon.png" alt="比价计算器" class="hero-app-icon">
                     <h1 data-i18n="app_name">比价计算器</h1>
                     <p class="subtitle" data-i18n="app_subtitle">专为日常和购物而设计</p>
-                    <p class="description" data-i18n="app_description">无广告、无订阅，启动迅速，操作简单。希望每一次打开它，都能为您带来一点小小的轻松与愉悦，让购物计算不再烦心！</p>
                     <div class="download-buttons">
-                        <a href="#" class="app-store-button">
-                            <img src="images/ios_download.svg" alt="Download on App Store">
+                        <a href="https://apps.apple.com/app/6737413316" class="download-button">
+                            <span class="button-text" data-i18n="download_ios">下载iOS版本</span>
+                            <span class="button-icon">↓</span>
+                        </a>
+                        <a href="#" class="download-button">
+                            <span class="button-text" data-i18n="download_android">下载安卓版本</span>
+                            <span class="button-icon">↓</span>
+                        </a>
+                        <a href="calc.html" class="download-button">
+                            <span class="button-text" data-i18n="download_web">网页版体验</span>
+                            <span class="button-icon">→</span>
                         </a>
                     </div>
-                </div>
-                <div class="hero-image">
-                    <img src="images/concept.png" alt="产品概念图" class="concept-image">
-                </div>
-            </div>
-            <div class="screenshots-gallery">
-                <div class="screenshots-list">
-                    <img src="images/screenshot1.png" alt="计算器界面" class="screenshot-thumb">
-                    <img src="images/screenshot2.png" alt="折扣计算" class="screenshot-thumb">
-                    <img src="images/screenshot3.png" alt="汇率转换" class="screenshot-thumb">
-                    <img src="images/screenshot4.png" alt="主题设置" class="screenshot-thumb">
-                    <img src="images/screenshot5.png" alt="计算历史" class="screenshot-thumb">
-                    <img src="images/screenshot6.png" alt="历史记录" class="screenshot-thumb">
-                    <img src="images/screenshot7.png" alt="设置界面" class="screenshot-thumb">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 添加模态框 -->
-    <div class="modal" id="screenshotModal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <img id="modalImage" src="" alt="">
-            <button class="modal-nav prev">&lt;</button>
-            <button class="modal-nav next">&gt;</button>
-        </div>
-    </div>
-
-    <!-- 功能特点 -->
-    <section class="features">
-        <div class="container">
-            <h2 data-i18n="features_title">主要功能</h2>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="icon-history">⌛</i>
-                    </div>
-                    <h3 data-i18n="feature1_title">贴心的计算历史</h3>
-                    <p data-i18n="feature1_desc">记录您的每一步计算，让比价更轻松，可随时将历史结果加入当前运算</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="icon-discount">%</i>
-                    </div>
-                    <h3 data-i18n="feature2_title">折上折计算</h3>
-                    <p data-i18n="feature2_desc">轻松处理折扣累加和增值税，让每一次优惠都算得清清楚楚</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="icon-currency">$</i>
-                    </div>
-                    <h3 data-i18n="feature3_title">汇率转换</h3>
-                    <p data-i18n="feature3_desc">每天自动更新，支持全球200多种货币</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="icon-theme">◐</i>
-                    </div>
-                    <h3 data-i18n="feature4_title">多种清新风格</h3>
-                    <p data-i18n="feature4_desc">突破传统深色风格，界面设计明亮清新，增添些许活力</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ部分 -->
-    <section class="faq">
-        <div class="container">
-            <h2 data-i18n="faq_title">常见问题</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3 data-i18n="faq1_title">如何使用折上折功能？</h3>
-                    <p data-i18n="faq1_desc">只需在计算器中输入原价，然后依次输入各个折扣即可自动计算最终价格。</p>
-                </div>
-                <div class="faq-item">
-                    <h3 data-i18n="faq2_title">汇率数据多久更新一次？</h3>
-                    <p data-i18n="faq2_desc">汇率数据每天自动更新一次，确保您获得最新的汇率信息。</p>
-                </div>
-                <div class="faq-item">
-                    <h3 data-i18n="faq3_title">是否支持数据备份？</h3>
-                    <p data-i18n="faq3_desc">所有计算历史都会自动保存在本地，确保您的数据安全。</p>
                 </div>
             </div>
         </div>
@@ -135,21 +58,7 @@
             <h2 data-i18n="contact_title">联系我们</h2>
             <div class="contact-content">
                 <div class="contact-text">
-                    <p data-i18n="contact_desc">如在使用过程中遇到问题或有任何小建议，欢迎随时告诉我们！我们会用心倾听您的反馈。</p>
-                    <div class="contact-methods">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="icon-email">✉</i>
-                            </div>
-                            <p><a href="mailto:wersling@me.com">wersling@me.com</a></p>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="icon-twitter">@</i>
-                            </div>
-                            <p>@wersling</p>
-                        </div>
-                    </div>
+                    <p data-i18n="contact_desc">如在使用过程中遇到问题或有任何小建议，欢迎随时告诉我们！我们会用心倾听您的反馈。<p><a href="mailto:wersling@me.com">wersling@me.com</a></p></p>
                 </div>
             </div>
         </div>
@@ -165,7 +74,6 @@
         </div>
     </footer>
 
-    <script src="js/slider.js"></script>
     <script src="js/i18n.js"></script>
     <script src="js/language.js"></script>
 </body>
