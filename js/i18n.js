@@ -11,6 +11,9 @@ const translations = {
         'download_ios': '下载iOS版本',
         'download_android': '下载安卓版本',
         'download_web': '网页版体验',
+        'privacy_title': '隐私政策',
+        'privacy_content': '我们的计算器应用不会收集用户的个人信息，也不会将个人信息用于第三方。仅在使用货币转换功能时需要网络连接。',
+        'back_to_home': '返回主页',
     },
     'zh-TW': {
         'nav_privacy': '隱私政策',
@@ -24,6 +27,9 @@ const translations = {
         'download_ios': '下載iOS版本',
         'download_android': '下載安卓版本',
         'download_web': '網頁版體驗',
+        'privacy_title': '隱私政策',
+        'privacy_content': '我們的計算器應用不會收集用戶的個人信息，也不會將個人信息用於第三方。僅在使用貨幣轉換功能時需要網絡連接。',
+        'back_to_home': '返回主頁',
     },
     'en': {
         'nav_privacy': 'Privacy Policy',
@@ -37,6 +43,9 @@ const translations = {
         'download_ios': 'Download for iOS',
         'download_android': 'Download for Android',
         'download_web': 'Try Web Version',
+        'privacy_title': 'Privacy Policy',
+        'privacy_content': 'Our calculator app does not collect personal information and will not share any information with third parties. Internet connection is only required when using the currency conversion feature.',
+        'back_to_home': 'Back to Home',
     },
     'fr': {
         'nav_privacy': 'Politique de Confidentialité',
@@ -50,5 +59,8 @@ const translations = {
         'download_ios': 'Télécharger pour iOS',
         'download_android': 'Télécharger pour Android',
         'download_web': 'Version Web',
+        'privacy_title': 'Politique de Confidentialité',
+        'privacy_content': 'Notre application de calculatrice ne collecte pas d\'informations personnelles et ne partagera aucune information avec des tiers. Une connexion Internet est uniquement nécessaire lors de l\'utilisation de la fonction de conversion de devises.',
+        'back_to_home': 'Retour à l\'Accueil',
     }
 }; 
