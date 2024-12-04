@@ -937,3 +937,36 @@ footer {
         padding: 0 20px;
     }
 }
+
+/* 会员订阅服务条款样式 */
+.terms-content {
+    padding: 100px 0 80px;
+    min-height: calc(100vh - 270px);
+    background: transparent;
+}
+
+.terms-text {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    white-space: pre-wrap;  /* 保留文本中的换行和空格 */
+}
+
+.terms-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    white-space: pre-wrap;  /* 保留文本中的换行和空格 */
+}
+
+.terms-content h1 {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 40px;
+    color: var(--text-color);
+}
