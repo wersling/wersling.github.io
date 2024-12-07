@@ -74,4 +74,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    const androidButton = document.getElementById('androidButton');
+    androidButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        const currentLang = document.documentElement.lang;
+        alert(translations[currentLang].android_not_available);
+    });
 }); 

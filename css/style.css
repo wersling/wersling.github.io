@@ -1,8 +1,12 @@
 :root {
-    --primary-color: #333333;
-    --secondary-color: #333333;
-    --text-color: #333333;
-    --shadow-color: rgba(0, 0, 0, 0.1);
+    --primary-color: #E84393;  /* 主粉色 */
+    --secondary-color: #4A90E2;  /* 主蓝色 */
+    --primary-light: #FF9FF3;  /* 浅粉色 */
+    --secondary-light: #74B9FF;  /* 浅蓝色 */
+    --text-color: #2D3748;  /* 深色文本 */
+    --text-light: #718096;  /* 浅色文本 */
+    --background: linear-gradient(135deg, #FFF5F7 0%, #EDF2FF 100%);  /* 背景渐变 */
+    --shadow-color: rgba(232, 67, 147, 0.08);  /* 阴影颜色 */
 }
 
 * {
@@ -15,7 +19,7 @@ body {
     font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     line-height: 1.8;
     color: var(--text-color);
-    background: linear-gradient(135deg, #F8F0FF 0%, #FFF0F5 100%);
+    background: var(--background);
     background-attachment: fixed;
     letter-spacing: 0.3px;
     min-height: 100vh;
@@ -29,9 +33,9 @@ body {
 
 /* 导航栏样式 */
 .navbar {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 20px var(--shadow-color);
     position: fixed;
     width: 100%;
     top: 0;
@@ -72,15 +76,16 @@ body {
 }
 
 .nav-links a {
-    color: #333333;
+    color: var(--text-color);
     text-decoration: none;
     font-size: 0.9rem;
     position: relative;
     padding-bottom: 2px;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #666666;
+    color: var(--primary-color);
 }
 
 .nav-links a::after {
@@ -90,7 +95,7 @@ body {
     left: 0;
     width: 0;
     height: 1px;
-    background: var(--primary-color);
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     transition: width 0.3s ease;
 }
 
@@ -101,7 +106,7 @@ body {
 /* Hero区域样式调整 */
 .hero {
     padding: 140px 0 80px;
-    background: transparent;
+    background: var(--background);
     text-align: center;
 }
 
@@ -128,13 +133,15 @@ body {
     margin-bottom: 5px;
     color: #333333;
     font-weight: 600;
-    background: none;
-    -webkit-text-fill-color: initial;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
 }
 
 .subtitle {
     font-size: 1.5rem;
-    color: #333333;
+    color: var(--text-light);
     margin-bottom: 20px;
     font-weight: 500;
     letter-spacing: 0.5px;
@@ -223,76 +230,101 @@ body {
 
 /* 功能特点样式 */
 .features {
-    padding: 100px 0;
-    background-color: white;
+    padding: 3rem 0;
+    background: linear-gradient(135deg, #FFF5F7 0%, #EDF2FF 100%);
 }
 
 .features h2 {
     text-align: center;
-    margin-bottom: 60px;
-    font-size: 2.5rem;
-    color: var(--secondary-color);
-    font-weight: 700;
-    margin-bottom: 80px;
-    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    margin-bottom: 2rem;
+    font-weight: 600;
+    background: linear-gradient(45deg, #E84393, #4A90E2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 0 1rem;
 }
 
 .feature-item {
-    text-align: center;
-    padding: 30px;
-    border-radius: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     background: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    position: relative;
+    overflow: hidden;
 }
 
-.feature-icon {
-    font-size: 2rem;
-    margin-bottom: 25px;
-    width: 80px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--background-color);
-    border-radius: 20px;
-    transition: transform 0.3s ease;
-    font-style: normal;
-    color: var(--primary-color);
+.feature-item:nth-child(1)::before {
+    background: linear-gradient(45deg, #E84393, #FF9FF3);
 }
 
-.feature-item:hover .feature-icon {
-    transform: scale(1.1);
+.feature-item:nth-child(2)::before {
+    background: linear-gradient(45deg, #4A90E2, #74B9FF);
 }
 
-.feature-item h3 {
-    color: var(--primary-color);
-    font-weight: 600;
-    margin-bottom: 15px;
-    font-size: 1.3rem;
+.feature-item:nth-child(3)::before {
+    background: linear-gradient(45deg, #FF9FF3, #4A90E2);
 }
 
-.feature-item p {
-    color: var(--text-color);
-    line-height: 1.6;
-    font-size: 1rem;
-    max-width: 280px;
-    margin: 0 auto;
+.feature-item:nth-child(4)::before {
+    background: linear-gradient(45deg, #74B9FF, #A8E6CF);
+}
+
+.feature-item:nth-child(5)::before {
+    background: linear-gradient(45deg, #FFB8EB, #4A90E2);
+}
+
+.feature-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    opacity: 0.8;
+    transition: all 0.3s ease;
 }
 
 .feature-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px var(--shadow-color);
+    box-shadow: 0 8px 20px rgba(232, 67, 147, 0.08);
+}
+
+.feature-item:hover::before {
+    opacity: 1;
+    width: 6px;
+}
+
+.feature-item h3 {
+    color: #2D3748;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-left: 0.8rem;
+}
+
+.feature-item p {
+    color: #718096;
+    line-height: 1.5;
+    font-size: 0.95rem;
+    padding-left: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .features-grid {
+        gap: 1rem;
+    }
+    
+    .feature-item {
+        margin: 0 0.8rem;
+    }
 }
 
 /* FAQ样式 */
@@ -338,10 +370,10 @@ body {
     margin-bottom: 20px;
 }
 
-/* 联系我们样式 */
+/* 联系我们区域 */
 .contact {
     padding: 100px 0;
-    background-color: #FFFFFF;
+    background-color: white;
 }
 
 .contact h2 {
@@ -515,38 +547,46 @@ body {
 }
 
 .language-selector select:hover {
-    background-color: var(--background-color);
+    background-color: rgba(232, 67, 147, 0.05);
 } 
 
-/* 隐私政策页面样式优化 */
-.privacy-content {
+/* 隐私政策和服务条款页面样式 */
+.privacy-content,
+.terms-content {
     padding: 140px 0 80px;
     min-height: calc(100vh - 270px);
-    background: transparent;
+    background: var(--background);  /* 使用主题渐变背景 */
 }
 
-.privacy-text {
+.privacy-text,
+.terms-text {
     max-width: 800px;
     margin: 0 auto;
-    padding: 40px;
-    background: rgba(255, 255, 255, 0.5);
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.8);  /* 半透明白色背景 */
     backdrop-filter: blur(10px);
     border-radius: 20px;
     box-shadow: 0 10px 30px var(--shadow-color);
+    border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
-.privacy-text p {
+.privacy-text p,
+.terms-text p {
     font-size: 1.1rem;
     line-height: 1.8;
     color: var(--text-color);
     margin-bottom: 20px;
 }
 
-.privacy-content h1 {
+.privacy-content h1,
+.terms-content h1 {
     text-align: center;
     font-size: 2.4rem;
     margin-bottom: 40px;
-    color: var(--text-color);
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
 }
 
 .back-to-home {
@@ -576,7 +616,7 @@ body {
     right: -2px;
     bottom: -2px;
     border-radius: 16px;
-    background: linear-gradient(45deg, #FF69B4, #9370DB);
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     z-index: -1;
     transition: all 0.2s ease;
     opacity: 0.7;
@@ -593,6 +633,21 @@ body {
     left: -3px;
     right: -3px;
     bottom: -3px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .privacy-text,
+    .terms-text {
+        margin: 0 1rem;
+        padding: 1.5rem;
+    }
+    
+    .privacy-content h1,
+    .terms-content h1 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
 }
 
 /* 截图画廊样式 */
@@ -778,7 +833,7 @@ body {
 
 /* 修改页脚样式 */
 footer {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
     color: white;
     padding: 40px 0;
@@ -794,7 +849,7 @@ footer {
 .footer-content p {
     margin: 0;
     text-align: center;
-    color: #333333;
+    color: var(--text-light);
 }
 
 /* 修改 feature-icon 样式 */
@@ -835,29 +890,23 @@ footer {
     border-radius: 14px;
     text-decoration: none;
     font-weight: 500;
-    background-color: #000000;
-    color: white;
+    background-color: #000000;  /* 恢复黑色背景 */
+    color: white;  /* 恢复白色文字 */
     transition: all 0.2s ease;
     font-size: 1rem;
     min-width: 200px;
     justify-content: flex-start;
     position: relative;
-    border: 1px solid transparent;
+    border: 1px solid transparent;  /* 恢复透明边框 */
 }
 
 .download-button .button-icon {
     width: 24px;
     height: 24px;
-    filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);  /* 保持图标为白色 */
     flex-shrink: 0;
 }
 
-/* 移除旧的图标样式 */
-.button-icon {
-    font-size: 1rem;
-}
-
-/* 保持其他按钮样式不变 */
 .download-button::before {
     content: '';
     position: absolute;
@@ -866,7 +915,6 @@ footer {
     right: -2px;
     bottom: -2px;
     border-radius: 16px;
-    background: linear-gradient(45deg, #FF69B4, #9370DB);
     z-index: -1;
     transition: all 0.2s ease;
     opacity: 0.7;
@@ -885,31 +933,30 @@ footer {
     bottom: -3px;
 }
 
-/* 移除之前的颜色样式 */
+/* 每个按钮不同的渐变边框颜色 */
+.download-button:nth-child(1)::before {
+    background: linear-gradient(45deg, var(--primary-color), var(--primary-light));
+}
+
+.download-button:nth-child(2)::before {
+    background: linear-gradient(45deg, var(--secondary-color), var(--secondary-light));
+}
+
+.download-button:nth-child(3)::before {
+    background: linear-gradient(45deg, var(--primary-light), var(--secondary-color));
+}
+
+/* 移除之前的白色背景样式 */
 .download-button:nth-child(1),
 .download-button:nth-child(2),
 .download-button:nth-child(3) {
     background-color: #000000;
-    box-shadow: none;
 }
 
 .download-button:nth-child(1):hover,
 .download-button:nth-child(2):hover,
 .download-button:nth-child(3):hover {
     background-color: #222222;
-}
-
-/* 每个按钮不同的渐变边框颜色 */
-.download-button:nth-child(1)::before {
-    background: linear-gradient(45deg, #FF69B4, #9370DB);
-}
-
-.download-button:nth-child(2)::before {
-    background: linear-gradient(45deg, #9370DB, #87CEEB);
-}
-
-.download-button:nth-child(3)::before {
-    background: linear-gradient(45deg, #87CEEB, #FF69B4);
 }
 
 /* 响应式调整 */
@@ -938,35 +985,88 @@ footer {
     }
 }
 
-/* 会员订阅服务条款样式 */
-.terms-content {
-    padding: 100px 0 80px;
-    min-height: calc(100vh - 270px);
-    background: transparent;
+/* 服务条款样式补充 */
+.terms-section {
+    margin-bottom: 2rem;
+}
+
+.terms-section:last-child {
+    margin-bottom: 0;
+}
+
+.terms-section h2 {
+    color: var(--text-color);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.terms-section p {
+    margin-bottom: 0.8rem;
+}
+
+.terms-section ul {
+    list-style: none;
+    padding-left: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.terms-section ul li {
+    position: relative;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.terms-section ul li::before {
+    content: '•';
+    color: var(--primary-color);
+    position: absolute;
+    left: -1rem;
 }
 
 .terms-text {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px;
-    background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    box-shadow: 0 10px 30px var(--shadow-color);
-    white-space: pre-wrap;  /* 保留文本中的换行和空格 */
+    white-space: normal;  /* 覆盖之前的 pre-wrap */
 }
 
-.terms-text p {
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .terms-section h2 {
+        font-size: 1.2rem;
+    }
+    
+    .terms-section ul {
+        padding-left: 1rem;
+    }
+}
+
+.terms-section h3 {
+    color: var(--text-color);
     font-size: 1.1rem;
-    line-height: 1.8;
-    color: var(--text-color);
-    margin-bottom: 20px;
-    white-space: pre-wrap;  /* 保留文本中的换行和空格 */
+    margin: 1.5rem 0 1rem;
+    font-weight: 600;
 }
 
-.terms-content h1 {
-    text-align: center;
-    font-size: 2.4rem;
-    margin-bottom: 40px;
+.terms-section ul {
+    list-style: none;
+    padding-left: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.terms-section ul li {
+    position: relative;
+    margin-bottom: 0.5rem;
     color: var(--text-color);
+    line-height: 1.6;
+}
+
+.terms-section ul li::before {
+    content: '•';
+    color: var(--primary-color);
+    position: absolute;
+    left: -1rem;
+}
+
+.terms-section p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
 }
