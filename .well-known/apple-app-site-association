@@ -1,0 +1,15 @@
+{
+  "applinks":{
+    "apps":[],
+    "details":[
+      {
+        "appID":"7L52W29X27.com.wersling.calc",
+        "paths": [ "*" ]
+      },
+      {
+        "appID":"7L52W29X27.com.wersling.calc",
+        "paths": [ "/wxapi/*" ]
+      }
+    ]
+  }
+}

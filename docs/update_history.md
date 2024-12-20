@@ -1,7 +1,55 @@
-## 1.0.15
-简体中文:
- - 清空历史计算支持撤回
- - 新增产品介绍
+## 1.2.0
+简体中文：
+ - 预算清单支持创建多个清单
+ - 优化部分操作体验
+
+ - Budget list supports creating multiple lists
+ - Optimized some operational experiences
+
+## 1.1.0
+简体中文：
+ - 新增实时显示计算结果
+ - 新增功能介绍Tips
+ - 预算清单和历史记录支持导出文本记录
+ - 实时计算结果和记录可以设置是否显示
+ - 计算输入更丝滑
+ - 优化日期选择
+ - 优化列表操作体验
+ - 优化计算体验
+ - 新增红弦古筝主题
+
+繁體中文：
+ - 新增即時顯示計算結果
+ - 新增功能介紹Tips
+ - 預算清單和歷史記錄支持導出文本記錄
+ - 即時計算結果和記錄可以設置是否顯示
+ - 計算輸入更絲滑
+ - 優化日期選擇
+ - 優化列表操作體驗
+ - 優化計算體驗
+ - 新增紅弦古箏主題
+
+English:
+ - Added real-time calculation results display
+ - Added feature introduction tips
+ - Budget list and history now support text export
+ - Real-time calculation results and records can be toggled
+ - Smoother calculation input
+ - Improved date selection
+ - Enhanced list operation experience
+ - Improved calculation experience
+ - Added Red String Guzheng theme
+
+Français:
+ - Ajout de l'affichage des résultats en temps réel
+ - Ajout de conseils d'introduction aux fonctionnalités
+ - La liste de budget et l'historique prennent en charge l'exportation de texte
+ - Les résultats et enregistrements en temps réel peuvent être activés/désactivés
+ - Saisie de calcul plus fluide
+ - Amélioration de la sélection de date
+ - Amélioration de l'expérience d'opération de liste
+ - Amélioration de l'expérience de calcul
+ - Ajout du thème Guzheng à cordes rouges
 
 ## 1.0.14
 
